@@ -28,6 +28,17 @@ module.exports = () => {
         swSrc: './src-sw.js',
         swDest: 'src-sw.js'
       }),
+
+      new WebpackPwaManifest({
+        name: 'Noted',
+        description: 'Browser based text editor.',
+        background_color: '#2b2c26',
+        theme_color: '#39b1e4',
+        //Specifies the directory from which the PWA is opened
+        start_url: './',
+        //Specifies the path where Assets like images will be served from
+        publicPath: './',
+      })
       
     ],
 
