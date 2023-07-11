@@ -18,7 +18,7 @@ module.exports = () => {
     plugins: [
 
       new HtmlWebpackPlugin({
-        template: '.index.html',
+        template: 'index.html',
         title: 'Text Editor'
       }),
 
@@ -40,7 +40,7 @@ module.exports = () => {
           {
             src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.json('assets', 'icons')
+            destination: path.join('assets', 'icons')
           }
         ],
         fingerprints: false,
@@ -63,10 +63,10 @@ module.exports = () => {
           exclude: /node_modules/,
           //Using babel compiler so that the program will be usable in older browsers
           use: {
-            loader: 'babel-loadeer',
+            loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
-              plugins: ['@babel/plugin-proposal-object-res-spread', '@babel/transform-runtime']
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime']
             }
           }
         }
