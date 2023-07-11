@@ -3,8 +3,6 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
-// TODO: Add and configure workbox plugins for a service worker and manifest file.
-// TODO: Add CSS loaders and babel to webpack.
 
 module.exports = () => {
   return {
@@ -44,14 +42,34 @@ module.exports = () => {
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.json('assets', 'icons')
           }
-        ]
+        ],
+        fingerprints: false,
+        inject: true,
       })
       
     ],
 
     module: {
       rules: [
-        
+
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
+
+        {
+          //Regex checks for files ending in .js or .mjs with the exception of node_modules
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          //Using babel compiler so that the program will be usable in older browsers
+          use: {
+            loader: 'babel-loadeer',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-res-spread', '@babel/transform-runtime']
+            }
+          }
+        }
       ],
     },
   };
