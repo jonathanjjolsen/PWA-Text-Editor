@@ -38,6 +38,13 @@ module.exports = () => {
         start_url: './',
         //Specifies the path where Assets like images will be served from
         publicPath: './',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.json('assets', 'icons')
+          }
+        ]
       })
       
     ],
