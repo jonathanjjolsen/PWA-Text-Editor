@@ -33,7 +33,7 @@ module.exports = () => {
         background_color: '#2b2c26',
         theme_color: '#39b1e4',
         //Specifies the directory from which the PWA is opened
-        start_url: './',
+        start_url: '/',
         //Specifies the path where Assets like images will be served from
         publicPath: './',
         icons: [
