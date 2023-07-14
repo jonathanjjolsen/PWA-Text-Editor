@@ -39,8 +39,3 @@ const assetCache = new CacheFirst({
   ],
 })
 registerRoute(({ request}) => request.destination === 'script' || request.destination === 'style', assetCache);
-
-offlineFallback({
-  pageFallback: '/index.html',
-  imageFallback: null,
-});
