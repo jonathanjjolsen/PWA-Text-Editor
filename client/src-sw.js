@@ -11,7 +11,7 @@ const pageCache = new CacheFirst({
   cacheName: 'page-cache',
   plugins: [
     new CacheableResponsePlugin({
-      statuses: [0, 200],
+      statuses: [200, 404],
     }),
     new ExpirationPlugin({
       maxAgeSeconds: 30 * 24 * 60 * 60,
@@ -31,8 +31,16 @@ const assetCache = new CacheFirst({
   cacheName: 'asset-cache',
   plugins: [
     new CacheableResponsePlugin({
-      maxAgeSeconds: 30 * 24 * 60 * 60,
+      statuses: [200, 404],
     }),
+    new ExpirationPlugin({
+      maxAgeSeconds: 30 * 24 * 60 * 60,
+    })
   ],
 })
 registerRoute(({ request}) => request.destination === 'script' || request.destination === 'style', assetCache);
+
+offlineFallback({
+  pageFallback: '/index.html',
+  imageFallback: null,
+});
