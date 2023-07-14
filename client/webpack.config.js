@@ -36,6 +36,7 @@ module.exports = () => {
         start_url: '/',
         //Specifies the path where Assets like images will be served from
         publicPath: './',
+        display: 'standalone',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
