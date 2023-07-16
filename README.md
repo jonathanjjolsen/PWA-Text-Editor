@@ -1,4 +1,4 @@
-# Noted
+# Noted (PWA)
 
 ## Description:
 This application is a simple text editor that incorporates the use of webpacks and plugins for extra utility. Included is a full text editor that uses your internet's browser abilities to store the users data and refresh it to the screen when the application is relaunched. It even has the ability to be installed and used remotely without internet connectivity. Search futher through this README for usefull information on functionality.
@@ -49,7 +49,7 @@ THEN I should have proper build scripts for a webpack application
 ```
 
 ### Screenshot:
-![]()
+![](./Assets/jate.png)
 
 ## Usage Information
 
@@ -62,7 +62,7 @@ In order to make full use of this application:
 - You can now test that it has saved your work by refreshing the webpage.
 - If you would like to install the application to your personal hard drive for offline use, click the "Install!" button located in the top left corner.
 
-### [GitHub Repository](https://github.com/jonathanjjolsen/my-social)
+### [GitHub Repository](https://github.com/jonathanjjolsen/PWA-Text-Editor)
 
 ## Utilized Programs
 - Node.js: [20.3.0](https://nodejs.org/en)
