@@ -1,4 +1,14 @@
-# PWA Text Editor
+# Noted
+
+## Description:
+This application is a simple text editor that incorporates the use of webpacks and plugins for extra utility. Included is a full text editor that uses your internet's browser abilities to store the users data and refresh it to the screen when the application is relaunched. It even has the ability to be installed and used remotely without internet connectivity. Search futher through this README for usefull information on functionality.
+
+## Table of Contents:
+- [The Challenge](#The-Challenge)
+- [Usage Information](#Usage-Information)
+- [Utilized Programs](#Utilized-Programs)
+- [What I Learned](#What-I-Learned)
+- [Author](#Author)
 
 ## User Story
 
@@ -37,3 +47,36 @@ THEN I should have my static assets pre cached upon loading along with subsequen
 WHEN I deploy to Heroku
 THEN I should have proper build scripts for a webpack application
 ```
+
+### Screenshot:
+![]()
+
+## Usage Information
+
+### Operation
+In order to make full use of this application:
+- Navigate to [THIS](https://noted-pwa-2186a19d9056.herokuapp.com/) website.
+- After loading, you'll notice that a default value has been auto populated to the text editor, this can either be saved or deleted.
+- To use the text editor, simply click anywhere within the text field and start typing.
+- In order to save the updated characters, click anywhere outside of the text entering space.
+- You can now test that it has saved your work by refreshing the webpage.
+- If you would like to install the application to your personal hard drive for offline use, click the "Install!" button located in the top left corner.
+
+### [GitHub Repository](https://github.com/jonathanjjolsen/my-social)
+
+## Utilized Programs
+- Node.js: [20.3.0](https://nodejs.org/en)
+- Express: [4.17.1](https://expressjs.com/)
+- Babel: [7.15.0](https://babeljs.io/)
+- HTML Webpack Plugin: [5.3.2](https://www.npmjs.com/package/html-webpack-plugin)
+- Style Loader: [3.2.1](https://www.npmjs.com/package/style-loader)
+- Webpack: [4.8.0](https://www.npmjs.com/package/webpack)
+
+## What I Learned
+- How utilize webpack services
+- How to store data in the IndexDB
+- How to create an installable PWA
+- How to pre-cache html pages and assets
+
+## Author
+Follow me on GitHub at [Jonathan Olsen](https://github.com/jonathanjjolsen)!
